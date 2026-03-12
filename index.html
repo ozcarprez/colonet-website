@@ -205,20 +205,16 @@ nav.scrolled{
 
 /* ─── LOGISTICS ─── */
 #logistics{display:grid;grid-template-columns:2fr 3fr;background:#EDD98A;}
-.logistics-img{position:relative;overflow:hidden;height:420px;}
-.logistics-img img{width:100%;height:100%;object-fit:cover;}
+.logistics-img{position:relative;overflow:hidden;height:480px;}
+.logistics-img img{width:100%;height:100%;object-fit:cover;object-position:center center;}
 .logistics-img::after{content:none;}
 .logistics-text{
   background:#EDD98A;color:var(--green-dark);
-  padding:50px 50px;display:flex;flex-direction:column;justify-content:center;
+  padding:30px 40px;display:flex;flex-direction:column;justify-content:center;
 }
-.logistics-text .section-title{color:var(--green-dark);margin-bottom:24px;font-size:clamp(24px,2.5vw,36px);}
-.logistics-features{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:4px;}
-.logistics-features li{
-  display:flex;align-items:flex-start;gap:12px;
-  font-size:14px;font-weight:500;color:var(--green-dark);line-height:1.5;
-}
-.logistics-features .lf-icon{color:var(--green-dark);font-weight:700;font-size:16px;flex-shrink:0;margin-top:2px;}
+.logistics-text .section-title{color:var(--green-dark);margin-bottom:12px;font-size:clamp(22px,2.2vw,32px);}
+.logistics-map{width:100%;max-width:420px;margin:0 auto;}
+.logistics-map svg{width:100%;height:auto;}
 
 /* ─── CERTIFICATIONS ─── */
 #certifications{background:white;padding:100px 5%;}
@@ -283,7 +279,8 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
   .products-grid{grid-template-columns:repeat(2,1fr);}
   #logistics{grid-template-columns:1fr;}
   .logistics-img{height:250px;}
-  .logistics-text{padding:36px 24px;}
+  .logistics-text{padding:30px 20px;}
+  .logistics-map{max-width:320px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:35px;}
 }
 @media(max-width:500px){
@@ -570,12 +567,43 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
       <span data-es="Fresco desde el campo " data-en="Fresh from the field ">Fresco desde el campo </span>
       <em><span data-es="hasta tu destino" data-en="to your destination">hasta tu destino</span></em>
     </h2>
-    <ul class="logistics-features">
-      <li><span class="lf-icon">&mdash;</span><span data-es="A solo 2 horas de la Garita de Otay" data-en="Only 2 hours from Otay Mesa Port of Entry">A solo 2 horas de la Garita de Otay</span></li>
-      <li><span class="lf-icon">&mdash;</span><span data-es="Entrega el mismo día a San Diego" data-en="Same-day delivery to San Diego">Entrega el mismo día a San Diego</span></li>
-      <li><span class="lf-icon">&mdash;</span><span data-es="Llegada a Los Ángeles en la madrugada" data-en="Overnight arrival to Los Angeles">Llegada a Los Ángeles en la madrugada</span></li>
-      <li><span class="lf-icon">&mdash;</span><span data-es="Clima mediterráneo costero ideal para cultivos orgánicos — baja humedad, temperaturas moderadas y menor presión de plagas" data-en="Ideal coastal Mediterranean climate — low humidity, moderate temperatures and reduced pest pressure">Clima mediterráneo costero ideal para cultivos orgánicos — baja humedad, temperaturas moderadas y menor presión de plagas</span></li>
-    </ul>
+    <div class="logistics-map">
+      <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+        <!-- Route paths - organic hand-drawn style -->
+        <path d="M 100,310 C 95,280 108,260 120,240 C 132,220 118,200 130,185" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
+        <path d="M 130,185 C 142,165 160,158 175,145 C 190,132 200,120 220,115" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
+        <path d="M 220,115 C 240,110 260,100 275,85 C 290,70 300,55 320,45" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
+        <!-- Colonet -->
+        <circle cx="100" cy="310" r="8" fill="var(--green-dark)"/>
+        <circle cx="100" cy="310" r="4" fill="#EDD98A"/>
+        <text x="118" y="316" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="var(--green-dark)">Colonet, BC</text>
+        <!-- Time label: 2 hrs -->
+        <rect x="108" y="238" rx="8" ry="8" width="52" height="20" fill="var(--green-dark)" opacity="0.85"/>
+        <text x="134" y="252" font-family="'DM Sans',sans-serif" font-size="10" font-weight="600" fill="#EDD98A" text-anchor="middle">2 hrs</text>
+        <!-- Garita Otay / Tijuana -->
+        <circle cx="130" cy="185" r="8" fill="var(--green-dark)"/>
+        <circle cx="130" cy="185" r="4" fill="#EDD98A"/>
+        <text x="148" y="182" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="var(--green-dark)">Garita Otay</text>
+        <text x="148" y="196" font-family="'DM Sans',sans-serif" font-size="10" fill="var(--green-dark)" opacity="0.7">Tijuana, BC</text>
+        <!-- Border line -->
+        <line x1="40" y1="160" x2="360" y2="148" stroke="var(--green-dark)" stroke-width="1" stroke-dasharray="4,4" opacity="0.35"/>
+        <text x="345" y="142" font-family="'DM Sans',sans-serif" font-size="8" font-weight="600" fill="var(--green-dark)" opacity="0.5" text-anchor="end">US / MX</text>
+        <!-- Time label: same day -->
+        <rect x="190" y="123" rx="8" ry="8" width="72" height="20" fill="var(--green-dark)" opacity="0.85"/>
+        <text x="226" y="137" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="mismo día" data-en="same day">mismo día</text>
+        <!-- San Diego -->
+        <circle cx="220" cy="115" r="8" fill="var(--green-dark)"/>
+        <circle cx="220" cy="115" r="4" fill="#EDD98A"/>
+        <text x="205" y="102" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="var(--green-dark)">San Diego</text>
+        <!-- Time label: overnight -->
+        <rect x="270" y="58" rx="8" ry="8" width="78" height="20" fill="var(--green-dark)" opacity="0.85"/>
+        <text x="309" y="72" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="madrugada" data-en="overnight">madrugada</text>
+        <!-- Los Angeles -->
+        <circle cx="320" cy="45" r="8" fill="var(--green-dark)"/>
+        <circle cx="320" cy="45" r="4" fill="#EDD98A"/>
+        <text x="290" y="32" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="var(--green-dark)">Los Angeles</text>
+      </svg>
+    </div>
   </div>
 </section>
 <!-- FOOTER -->
