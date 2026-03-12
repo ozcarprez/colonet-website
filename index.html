@@ -204,13 +204,13 @@ nav.scrolled{
 .product-info p{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray);}
 
 /* ─── LOGISTICS ─── */
-#logistics{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:#ffffff;padding:60px 5%;}
-.logistics-img{position:relative;overflow:hidden;height:420px;border-radius:16px;}
+#logistics{display:flex;gap:20px;background:#ffffff;padding:60px 5%;}
+.logistics-img{position:relative;overflow:hidden;height:420px;border-radius:16px;flex:0 0 35%;}
 .logistics-img img{width:100%;height:100%;object-fit:cover;object-position:center center;}
 .logistics-img::after{content:none;}
 .logistics-text{
   background:#EDD98A;color:var(--green-dark);border-radius:16px;
-  padding:30px 30px;display:flex;flex-direction:column;justify-content:center;height:420px;box-sizing:border-box;
+  padding:30px 30px;display:flex;flex-direction:column;justify-content:center;height:420px;box-sizing:border-box;flex:0 0 calc(65% - 20px);
 }
 .logistics-text .section-title{color:var(--green-dark);margin-bottom:8px;font-size:clamp(20px,2vw,28px);text-align:center;}
 .logistics-map{width:100%;max-width:360px;margin:0 auto;flex:1;display:flex;align-items:center;}
@@ -277,9 +277,9 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
   .stat-item:nth-child(2){border-right:none;}
   .about-grid{padding:36px 24px;}
   .products-grid{grid-template-columns:repeat(2,1fr);}
-  #logistics{grid-template-columns:1fr;padding:40px 5%;}
-  .logistics-img{height:300px;}
-  .logistics-text{height:auto;padding:30px 20px;}
+  #logistics{flex-direction:column;padding:40px 5%;}
+  .logistics-img{height:300px;flex:none;}
+  .logistics-text{height:auto;padding:30px 20px;flex:none;}
   .logistics-map{max-width:300px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:35px;}
 }
