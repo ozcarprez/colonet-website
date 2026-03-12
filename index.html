@@ -572,101 +572,142 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
       <em><span data-es="hasta tu destino" data-en="to your destination">hasta tu destino</span></em>
     </h2>
     <div class="logistics-map">
-      <svg viewBox="0 -150 400 670" xmlns="http://www.w3.org/2000/svg">
-        <!-- Baja California peninsula -->
-        <path d="M 130,520 C 128,510 125,495 122,480 C 118,460 115,440 118,420
-                 C 120,405 124,390 126,375 C 128,360 125,345 120,332
-                 C 116,322 114,312 115,300 C 116,290 120,282 125,275
-                 C 130,268 132,260 130,250 C 128,242 124,236 122,228
-                 C 120,218 122,208 128,200 C 134,192 140,186 145,180
-                 C 148,176 150,172 150,168 C 150,164 148,160 147,156
-                 C 146,150 148,144 152,140 C 156,136 162,134 168,132
-                 L 175,130
-                 C 182,128 188,126 192,122 C 196,118 198,112 196,106
-                 C 194,100 190,96 186,92 C 182,88 178,84 176,78
-                 C 174,72 176,66 180,62 C 184,58 190,56 196,54
-                 C 200,53 204,52 208,50 C 210,49 212,48 214,46
-                 L 218,42
-                 C 220,40 222,38 224,37 C 228,35 232,34 236,34
-                 L 260,34 L 270,32 L 280,34 L 290,33 L 300,35
-                 L 310,34 L 320,36 L 330,35 L 340,38 L 350,36
-                 L 355,38 L 360,35 L 365,37 L 370,36 L 380,38 L 400,36
-                 L 400,520 Z" fill="#c8b560" opacity="0.5"/>
-        <!-- US West Coast: California, Oregon, Washington -->
-        <path d="M 236,34 C 228,35 224,37 222,38 L 218,42
-                 C 216,44 214,46 212,48 C 210,49 208,50 204,52
-                 C 194,56 186,50 180,44 C 174,38 170,30 168,22
-                 C 166,14 168,6 174,0
-                 L 400,0 L 400,36
-                 L 380,38 L 370,36 L 365,37 L 360,35 L 355,38 L 350,36
-                 L 340,38 L 330,35 L 320,36 L 310,34 L 300,35 L 290,33
-                 L 280,34 L 270,32 L 260,34 Z" fill="#c8b560" opacity="0.7"/>
-        <!-- US/Canada coast extending north -->
-        <path d="M 174,0 C 180,-8 190,-14 202,-18
-                 C 214,-22 228,-20 238,-26 C 248,-32 252,-42 250,-52
-                 C 248,-60 242,-66 238,-72 C 234,-78 232,-84 234,-90
-                 C 236,-96 242,-100 250,-102 C 258,-104 266,-102 274,-100
-                 C 282,-98 290,-96 298,-98 C 306,-100 312,-106 316,-112
-                 L 400,-112 L 400,0 Z" fill="#c8b560" opacity="0.55"/>
-        <!-- US / MX Border line -->
-        <line x1="0" y1="35" x2="400" y2="35" stroke="#1a3a1a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.3"/>
-        <text x="18" y="28" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#1a3a1a" opacity="0.45">US / MX</text>
-        <!-- US / Canada Border line -->
-        <line x1="0" y1="-100" x2="400" y2="-100" stroke="#1a3a1a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.25"/>
-        <text x="18" y="-105" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#1a3a1a" opacity="0.4">US / CA</text>
+      <svg viewBox="0 -350 380 940" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Teardrop pin template -->
+          <g id="pin">
+            <path d="M 0,-12 C -6.6,-12 -12,-6.6 -12,0 C -12,6 0,16 0,16 C 0,16 12,6 12,0 C 12,-6.6 6.6,-12 0,-12 Z" fill="#1a3a1a"/>
+            <circle cx="0" cy="-1" r="4" fill="#EDD98A"/>
+          </g>
+        </defs>
 
-        <!-- ═══ ROUTE ═══ -->
-        <!-- Colonet → Otay -->
-        <path d="M 148,365 C 160,340 175,300 190,260 C 205,220 215,180 230,130 C 238,100 245,75 250,55" fill="none" stroke="#1a3a1a" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
-        <!-- Otay → San Diego -->
-        <path d="M 250,55 C 252,48 255,40 258,30 C 261,20 264,12 268,5" fill="none" stroke="#1a3a1a" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
-        <!-- San Diego → Los Angeles -->
-        <path d="M 268,5 C 272,-5 275,-18 276,-30 C 277,-42 274,-54 268,-65" fill="none" stroke="#1a3a1a" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
-        <!-- Los Angeles → Canada -->
-        <path d="M 268,-65 C 262,-78 258,-90 256,-100 C 254,-110 256,-120 262,-130" fill="none" stroke="#1a3a1a" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
+        <!-- ═══ LAND MASSES ═══ -->
 
-        <!-- ═══ POINTS & LABELS ═══ -->
-        <!-- Colonet, BC -->
-        <circle cx="148" cy="365" r="8" fill="#1a3a1a"/>
-        <circle cx="148" cy="365" r="4" fill="#EDD98A"/>
-        <text x="166" y="371" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="#1a3a1a">Colonet, BC</text>
+        <!-- Mainland Mexico (Sonora/north) -->
+        <path d="M 200,410 L 210,400 L 230,395 L 260,390 L 290,388 L 320,390
+                 L 350,395 L 380,400 L 380,580 L 0,580 L 0,510
+                 L 30,505 L 50,495 L 60,480 L 55,460 L 60,445
+                 L 80,435 L 100,430 L 130,425 L 160,418 L 180,412 Z"
+              fill="#c8b560" stroke="#a89840" stroke-width="0.8"/>
+
+        <!-- Baja California Peninsula -->
+        <path d="M 60,445 L 55,460 L 60,480 L 50,495 L 30,505
+                 L 0,510 L 0,580 L -10,580 L -10,510
+                 L 5,498 L 15,480 L 20,460 L 18,440
+                 L 14,420 L 8,400 L 5,385 L 8,370
+                 L 12,355 L 10,340 L 6,325 L 4,310
+                 L 8,295 L 14,282 L 12,268 L 8,255
+                 L 10,242 L 16,230 L 22,220 L 20,208
+                 L 16,195 L 18,182 L 24,172 L 32,164
+                 L 40,158 L 50,154 L 60,148 L 68,140
+                 L 74,130 L 78,118 L 80,106 L 85,96
+                 L 92,88 L 100,82 L 108,78 L 118,76
+                 L 128,78 L 136,82 L 142,88 L 148,96
+                 L 154,106 L 158,116 L 162,128
+                 L 170,140 L 180,152 L 186,160
+                 L 190,170 L 192,182 L 190,195
+                 L 184,210 L 186,225 L 195,240
+                 L 200,260 L 198,280 L 192,300
+                 L 188,318 L 190,335 L 195,350
+                 L 198,368 L 200,385 L 198,400
+                 L 190,410 L 180,412 L 160,418 L 130,425 L 100,430 L 80,435 Z"
+              fill="#c8b560" stroke="#a89840" stroke-width="0.8"/>
+
+        <!-- California -->
+        <path d="M 148,96 L 154,86 L 162,78 L 170,72 L 178,68
+                 L 186,62 L 192,54 L 196,44 L 198,34
+                 L 196,24 L 192,16 L 186,8 L 178,2
+                 L 168,0 L 158,-4 L 148,-6 L 140,-4
+                 L 132,-6 L 125,-12 L 120,-20 L 118,-30
+                 L 122,-42 L 130,-52 L 138,-58 L 144,-66
+                 L 148,-76 L 150,-88 L 148,-98 L 142,-106
+                 L 134,-112 L 128,-120 L 126,-130
+                 L 130,-138 L 136,-144 L 144,-148
+                 L 380,-148 L 380,96
+                 L 340,90 L 310,86 L 280,84 L 250,82
+                 L 220,80 L 200,78 L 180,80 L 165,84
+                 L 155,90 Z"
+              fill="#c8b560" stroke="#a89840" stroke-width="0.8"/>
+
+        <!-- Oregon + Washington -->
+        <path d="M 144,-148 L 152,-152 L 160,-154 L 170,-152
+                 L 178,-148 L 182,-142 L 184,-134
+                 L 182,-126 L 178,-118 L 176,-110
+                 L 178,-102 L 184,-96 L 192,-92
+                 L 200,-90 L 208,-92 L 214,-98
+                 L 218,-106 L 220,-116 L 218,-126
+                 L 214,-134 L 210,-140 L 208,-148
+                 L 380,-148
+                 L 380,-260 L 144,-260 Z"
+              fill="#c8b560" stroke="#a89840" stroke-width="0.8"/>
+
+        <!-- British Columbia (Canada) -->
+        <path d="M 144,-260 L 380,-260 L 380,-340 L 0,-340
+                 L 0,-260 L 50,-258 L 80,-260 L 100,-264
+                 L 116,-268 L 126,-266 L 134,-262 Z"
+              fill="#c8b560" stroke="#a89840" stroke-width="0.8"/>
+
+        <!-- ═══ STATE / COUNTRY BORDERS ═══ -->
+        <!-- US / MX border -->
+        <line x1="0" y1="96" x2="380" y2="96" stroke="#a89840" stroke-width="2" stroke-dasharray="8,5" opacity="0.5"/>
+        <text x="330" y="110" font-family="'DM Sans',sans-serif" font-size="9" font-weight="700" fill="#1a3a1a" opacity="0.4" text-anchor="end">US / MX</text>
+
+        <!-- US / Canada border -->
+        <line x1="0" y1="-260" x2="380" y2="-260" stroke="#a89840" stroke-width="2" stroke-dasharray="8,5" opacity="0.5"/>
+        <text x="330" y="-265" font-family="'DM Sans',sans-serif" font-size="9" font-weight="700" fill="#1a3a1a" opacity="0.4" text-anchor="end">US / CA</text>
+
+        <!-- CA / OR state line -->
+        <line x1="144" y1="-148" x2="380" y2="-148" stroke="#a89840" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+
+        <!-- ═══ ROUTE (dashed line) ═══ -->
+        <path d="M 68,350 C 75,320 85,280 95,240 C 105,200 120,160 140,120 L 155,96"
+              fill="none" stroke="#1a3a1a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.55"/>
+        <path d="M 155,96 C 158,88 162,78 168,68 L 178,52"
+              fill="none" stroke="#1a3a1a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.55"/>
+        <path d="M 178,52 C 185,32 190,10 192,-10 C 194,-30 190,-55 184,-72"
+              fill="none" stroke="#1a3a1a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.55"/>
+        <path d="M 184,-72 C 178,-95 175,-120 176,-148 C 177,-180 180,-220 186,-250 L 190,-275"
+              fill="none" stroke="#1a3a1a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.55"/>
+
+        <!-- ═══ PINS & LABELS ═══ -->
+
+        <!-- 1. Colonet, BC (Baja California, ~halfway down peninsula) -->
+        <use href="#pin" x="68" y="350" />
+        <text x="88" y="346" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="#1a3a1a">Colonet, BC</text>
 
         <!-- Time label: 2 hrs -->
-        <rect x="164" y="243" rx="8" ry="8" width="52" height="20" fill="#1a3a1a" opacity="0.85"/>
-        <text x="190" y="257" font-family="'DM Sans',sans-serif" font-size="10" font-weight="600" fill="#EDD98A" text-anchor="middle">2 hrs</text>
+        <rect x="90" y="218" rx="8" ry="8" width="52" height="20" fill="#1a3a1a" opacity="0.85"/>
+        <text x="116" y="232" font-family="'DM Sans',sans-serif" font-size="10" font-weight="600" fill="#EDD98A" text-anchor="middle">2 hrs</text>
 
-        <!-- Garita Otay / Tijuana -->
-        <circle cx="250" cy="55" r="8" fill="#1a3a1a"/>
-        <circle cx="250" cy="55" r="4" fill="#EDD98A"/>
-        <text x="268" y="52" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="#1a3a1a">Garita Otay</text>
-        <text x="268" y="66" font-family="'DM Sans',sans-serif" font-size="10" fill="#1a3a1a" opacity="0.7">Tijuana, BC</text>
+        <!-- 2. Garita Otay / Tijuana (at the border) -->
+        <use href="#pin" x="155" y="96" />
+        <text x="175" y="92" font-family="'Playfair Display',serif" font-size="11" font-weight="700" fill="#1a3a1a">Garita Otay</text>
+        <text x="175" y="105" font-family="'DM Sans',sans-serif" font-size="9" fill="#1a3a1a" opacity="0.65">Tijuana, BC</text>
 
         <!-- Time label: same day -->
-        <rect x="220" y="18" rx="8" ry="8" width="72" height="20" fill="#1a3a1a" opacity="0.85"/>
-        <text x="256" y="32" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="mismo día" data-en="same day">mismo día</text>
+        <rect x="182" y="60" rx="8" ry="8" width="72" height="20" fill="#1a3a1a" opacity="0.85"/>
+        <text x="218" y="74" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="mismo día" data-en="same day">mismo día</text>
 
-        <!-- San Diego -->
-        <circle cx="268" cy="5" r="8" fill="#1a3a1a"/>
-        <circle cx="268" cy="5" r="4" fill="#EDD98A"/>
-        <text x="286" y="2" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="#1a3a1a">San Diego</text>
+        <!-- 3. San Diego -->
+        <use href="#pin" x="178" y="52" />
+        <text x="198" y="48" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="#1a3a1a">San Diego</text>
 
         <!-- Time label: overnight -->
-        <rect x="230" y="-42" rx="8" ry="8" width="78" height="20" fill="#1a3a1a" opacity="0.85"/>
-        <text x="269" y="-28" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="madrugada" data-en="overnight">madrugada</text>
+        <rect x="210" y="-16" rx="8" ry="8" width="78" height="20" fill="#1a3a1a" opacity="0.85"/>
+        <text x="249" y="-2" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="madrugada" data-en="overnight">madrugada</text>
 
-        <!-- Los Angeles -->
-        <circle cx="268" cy="-65" r="8" fill="#1a3a1a"/>
-        <circle cx="268" cy="-65" r="4" fill="#EDD98A"/>
-        <text x="286" y="-68" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="#1a3a1a">Los Angeles</text>
+        <!-- 4. Los Angeles -->
+        <use href="#pin" x="184" y="-72" />
+        <text x="204" y="-76" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="#1a3a1a">Los Angeles</text>
 
         <!-- Time label: 2 days -->
-        <rect x="222" y="-108" rx="8" ry="8" width="52" height="20" fill="#1a3a1a" opacity="0.85"/>
-        <text x="248" y="-94" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="2 días" data-en="2 days">2 días</text>
+        <rect x="210" y="-178" rx="8" ry="8" width="52" height="20" fill="#1a3a1a" opacity="0.85"/>
+        <text x="236" y="-164" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="2 días" data-en="2 days">2 días</text>
 
-        <!-- Canadá -->
-        <circle cx="262" cy="-130" r="8" fill="#1a3a1a"/>
-        <circle cx="262" cy="-130" r="4" fill="#EDD98A"/>
-        <text x="280" y="-133" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="#1a3a1a" data-es="Canadá" data-en="Canada">Canadá</text>
+        <!-- 5. Vancouver, Canadá -->
+        <use href="#pin" x="190" y="-275" />
+        <text x="210" y="-279" font-family="'Playfair Display',serif" font-size="12" font-weight="700" fill="#1a3a1a">Vancouver</text>
+        <text x="210" y="-266" font-family="'DM Sans',sans-serif" font-size="9" fill="#1a3a1a" opacity="0.65" data-es="Canadá" data-en="Canada">Canadá</text>
       </svg>
     </div>
   </div>
