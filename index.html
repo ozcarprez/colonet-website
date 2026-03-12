@@ -572,11 +572,12 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
       <em><span data-es="hasta tu destino" data-en="to your destination">hasta tu destino</span></em>
     </h2>
     <div class="logistics-map">
-      <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 -80 400 440" xmlns="http://www.w3.org/2000/svg">
         <!-- Route paths - organic hand-drawn style -->
         <path d="M 100,310 C 95,280 108,260 120,240 C 132,220 118,200 130,185" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
         <path d="M 130,185 C 142,165 160,158 175,145 C 190,132 200,120 220,115" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
         <path d="M 220,115 C 240,110 260,100 275,85 C 290,70 300,55 320,45" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
+        <path d="M 320,45 C 330,25 335,5 340,-10 C 345,-25 350,-35 355,-50" fill="none" stroke="var(--green-dark)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6" opacity="0.6"/>
         <!-- Colonet -->
         <circle cx="100" cy="310" r="8" fill="var(--green-dark)"/>
         <circle cx="100" cy="310" r="4" fill="#EDD98A"/>
@@ -606,6 +607,13 @@ footer{background:var(--black);color:rgba(255,255,255,0.6);padding:70px 8% 36px;
         <circle cx="320" cy="45" r="8" fill="var(--green-dark)"/>
         <circle cx="320" cy="45" r="4" fill="#EDD98A"/>
         <text x="290" y="32" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="var(--green-dark)">Los Angeles</text>
+        <!-- Time label: 2 days -->
+        <rect x="300" y="-18" rx="8" ry="8" width="52" height="20" fill="var(--green-dark)" opacity="0.85"/>
+        <text x="326" y="-4" font-family="'DM Sans',sans-serif" font-size="9" font-weight="600" fill="#EDD98A" text-anchor="middle" data-es="2 días" data-en="2 days">2 días</text>
+        <!-- Canadá -->
+        <circle cx="355" cy="-50" r="8" fill="var(--green-dark)"/>
+        <circle cx="355" cy="-50" r="4" fill="#EDD98A"/>
+        <text x="310" y="-60" font-family="'Playfair Display',serif" font-size="13" font-weight="700" fill="var(--green-dark)" data-es="Canadá" data-en="Canada">Canadá</text>
       </svg>
     </div>
   </div>
