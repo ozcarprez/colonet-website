@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(awk 'NR>=408 && NR<=576' /c/Users/user/colonet-website/index.html | grep -c 'product-card')",
+      "Bash(node -e \"\nconst fs = require\\('fs'\\);\nlet lines = fs.readFileSync\\('index.html', 'utf8'\\).split\\('\\\\n'\\);\n// Remove lines 639-743 \\(0-indexed: 638-742\\)\nlines.splice\\(638, 105\\);\nfs.writeFileSync\\('index.html', lines.join\\('\\\\n'\\), 'utf8'\\);\nconsole.log\\('Removed harvest calendar section'\\);\n\")"
     ]
   }
 }
